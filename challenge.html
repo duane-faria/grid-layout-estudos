@@ -1,0 +1,54 @@
+<div class="container">
+  <header class="bg-tomato">Cabeçalho</header>
+  <section class="bg-tomato">small box 1</section>
+  <section class="bg-tomato">small box 2</section>
+  <section class="bg-tomato">small box 3</section>
+  <aside class="bg-tomato">Menu lateral</aside>
+  <main class="bg-tomato">Conteúdo principal</main>
+  <footer class="bg-tomato">rodape</footer>
+</div>
+
+<style>
+  .container {
+    margin: auto;
+    max-width: 1500px;
+    display: grid;
+    grid-template-rows: 80px 150px 1fr 80px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .bg-tomato {
+    background-color: tomato;
+  }
+
+  header {
+    grid-column: 1 / 5;
+    padding: 1rem 2rem;
+  }
+
+  main {
+    grid-column: 1/4;
+    height: 350px;
+    padding: 1rem 2rem;
+  }
+
+  aside {
+    grid-row: 2 / span 2;
+    grid-column: 4 / 5;
+    padding: 1rem 2rem;
+  }
+
+  section {
+    padding: 1rem 2rem;
+  }
+
+  footer {
+    grid-column: 1 / -1;
+    padding: 1rem 2rem;
+  }
+</style>
